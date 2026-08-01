@@ -67,8 +67,5 @@ Java desktop stopwatch application featuring:
 ## 📫 Connect With Me
 
 - GitHub: https://github.com/Owentech-beep
-- Portfolio: *(add your GitHub Pages link after deployment)*
-
----
 
 Built with ❤️ by **OwenTech**
