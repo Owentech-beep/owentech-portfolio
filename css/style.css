@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+#education .card {
+  border-left: 5px solid #0d6efd;
+  transition: transform 0.3s ease;
+}
+
+#education .card:hover {
+  transform: translateY(-5px);
+}
+#certifications .card {
+  transition: transform 0.3s ease;
+}
+
+#certifications .card:hover {
+  transform: translateY(-8px);
+}
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #typing {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+#about {
+  background: #ffffff;
+}
+
+#about h2 {
+  letter-spacing: 2px;
+}
+
+#about p {
+  color: #495057;
+  line-height: 1.8;
+  font-weight: 400; /* normal text */
+}
+
+#about .badge {
+  font-size: 0.9rem;
+  border-radius: 50px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  #about .badge {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* CONTACT SECTION */
+#contact .card {
+  background: #ffffff;
+}
+
+#contact .form-control {
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #dee2e6;
+}
+
+#contact .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #0d6efd;
+}
+
+#contact .rounded-4 {
+  transition: transform 0.3s ease;
+}
+
+#contact .rounded-4:hover {
+  transform: translateY(-5px);
+}
