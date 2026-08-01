@@ -1,4 +1,4 @@
-const text = "Bootstrap • Express.js • JavaScript • HTML • CSS";
+const text = "Bootstrap • Express.js • JavaScript;
 let i = 0;
 
 function typeEffect() {
