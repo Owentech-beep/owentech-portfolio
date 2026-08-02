@@ -2,13 +2,22 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
-
 .hero {
-  background: linear-gradient(135deg, #0d1117, #161b22);
-  color: white;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: linear-gradient(135deg, #0d1117, #161b22);
+  color: white;
+  padding-top: 90px; /* space for navbar */
+}
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }
 .hero img {
   width: 100%;
@@ -95,22 +104,61 @@ body {
 #contact .card {
   background: #ffffff;
 }
-
 #contact .form-control {
   border-radius: 12px;
   padding: 14px 16px;
   border: 1px solid #dee2e6;
 }
-
 #contact .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   border-color: #0d6efd;
 }
-
 #contact .rounded-4 {
   transition: transform 0.3s ease;
 }
-
 #contact .rounded-4:hover {
   transform: translateY(-5px);
+}
+/* ===== GLOBAL CARD SHADOW + HOVER ===== */
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.3s ease !important;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+}
+/* Remove dashes/underlines from social icons */
+footer a,
+#contact a {
+  text-decoration: none !important;
+}
+footer a:hover,
+#contact a:hover {
+  text-decoration: none !important;
+}
+footer a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+footer a:hover {
+  transform: translateY(-5px);
+  color: #0d6efd !important;
+}
+/* Navbar brand */
+.navbar-brand img {
+  object-fit: cover;
+}
+
+/* Mobile logo size */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .navbar-brand span {
+    font-size: 1rem;
+  }
 }

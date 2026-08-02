@@ -1,4 +1,3 @@
-# owentech-portfolio
 # OwenTech Portfolio
 
 A modern, responsive personal portfolio website built with **HTML5, CSS3, JavaScript, and Bootstrap 5**.

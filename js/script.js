@@ -1,4 +1,4 @@
-const text = "Bootstrap • Express.js • JavaScript;
+const text = "Full-Stack Developer • Java Programmer • AI Prompt Engineer";
 let i = 0;
 
 function typeEffect() {
