@@ -468,28 +468,119 @@
 </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="py-5">
-    <div class="container text-center">
-      <h2 class="section-title">Skills</h2>
+  <!-- SKILLS -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container">
 
-      <div class="d-flex flex-wrap justify-content-center">
-        <span class="badge bg-primary skill-badge">HTML5</span>
-        <span class="badge bg-success skill-badge">CSS3</span>
-        <span class="badge bg-warning text-dark skill-badge">JavaScript</span>
-        <span class="badge bg-danger skill-badge">Bootstrap 5</span>
-        <span class="badge bg-dark skill-badge">Node.js</span>
-        <span class="badge bg-secondary skill-badge">Express.js</span>
-        <span class="badge bg-info text-dark skill-badge">EJS</span>
-        <span class="badge bg-primary skill-badge">Java</span>
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">
+        My <span class="text-primary">Skills</span>
+      </h2>
+      <p class="lead text-muted">
+        Technologies and tools I use to build modern web applications,
+        Java desktop software, and AI-powered solutions.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Frontend -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm skill-card">
+          <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+          <h5 class="fw-bold">Frontend</h5>
+
+          <div class="d-flex flex-wrap justify-content-center mt-3">
+            <span class="badge bg-primary m-1">HTML5</span>
+            <span class="badge bg-primary m-1">CSS3</span>
+            <span class="badge bg-primary m-1">Bootstrap 5</span>
+            <span class="badge bg-primary m-1">JavaScript</span>
+            <span class="badge bg-primary m-1">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm skill-card">
+          <i class="fas fa-server fa-3x text-success mb-3"></i>
+          <h5 class="fw-bold">Backend</h5>
+
+          <div class="d-flex flex-wrap justify-content-center mt-3">
+            <span class="badge bg-success m-1">Node.js</span>
+            <span class="badge bg-success m-1">Express.js</span>
+            <span class="badge bg-success m-1">REST APIs</span>
+            <span class="badge bg-success m-1">Nodemailer</span>
+            <span class="badge bg-success m-1">Environment Variables</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Java -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm skill-card">
+          <i class="fab fa-java fa-3x text-warning mb-3"></i>
+          <h5 class="fw-bold">Java Development</h5>
+
+          <div class="d-flex flex-wrap justify-content-center mt-3">
+            <span class="badge bg-warning text-dark m-1">Java</span>
+            <span class="badge bg-warning text-dark m-1">Java Swing</span>
+            <span class="badge bg-warning text-dark m-1">GUI Applications</span>
+            <span class="badge bg-warning text-dark m-1">OOP</span>
+            <span class="badge bg-warning text-dark m-1">Desktop Software</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm skill-card">
+          <i class="fas fa-tools fa-3x text-info mb-3"></i>
+          <h5 class="fw-bold">Tools & Deployment</h5>
+
+          <div class="d-flex flex-wrap justify-content-center mt-3">
+            <span class="badge bg-info text-dark m-1">Git</span>
+            <span class="badge bg-info text-dark m-1">GitHub</span>
+            <span class="badge bg-info text-dark m-1">Render</span>
+            <span class="badge bg-info text-dark m-1">VS Code</span>
+            <span class="badge bg-info text-dark m-1">Bash</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI Skills -->
+    <div class="row mt-5 justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="card border-0 shadow-lg rounded-4 p-4 skill-card">
+
+          <div class="text-center mb-4">
+            <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+            <h4 class="fw-bold">AI & Coding Agents</h4>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-center">
+            <span class="badge bg-dark m-2 p-2">Prompt Engineering</span>
+            <span class="badge bg-dark m-2 p-2">AI-Assisted Development</span>
+            <span class="badge bg-dark m-2 p-2">Claude Code</span>
+            <span class="badge bg-dark m-2 p-2">Coding Agents</span>
+            <span class="badge bg-dark m-2 p-2">Debugging with AI</span>
+            <span class="badge bg-dark m-2 p-2">Automation Workflows</span>
+          </div>
+
+        </div>
       </div>
     </div>
-  </section>
 
- <!-- CONTACT -->
+  </div>
+</section>
 <!-- CONTACT -->
 <section id="contact" class="py-5 bg-dark text-white">
   <div class="container">
 
+    <!-- Heading -->
     <div class="text-center mb-5">
       <h2 class="display-5 fw-bold">
         Contact <span class="text-primary">Me</span>
@@ -501,13 +592,15 @@
       </p>
     </div>
 
+    <!-- Contact Form -->
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
 
         <div class="card border-0 shadow-lg rounded-4">
           <div class="card-body p-4 p-md-5">
+            <!-- Contact Alert -->
+           <div id="formAlert" class="mb-3"></div>
 
-            <!-- BACKEND FORM -->
             <form action="/contact" method="POST">
 
               <div class="row g-3">
@@ -572,29 +665,49 @@
     </div>
 
     <!-- Contact Info -->
-    <div class="row text-center mt-5 g-4">
+    <div class="row text-center mt-5 g-4 justify-content-center">
 
-      <div class="col-12 col-md-4">
-        <div class="p-4 rounded-4 bg-secondary bg-opacity-25 h-100">
+      <!-- Email -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="contact-info-card p-4 rounded-4 h-100">
           <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
-          <h5>Email</h5>
-          <p class="mb-0">owenlehlohonolo636@gmail.com</p>
+
+          <h5 class="fw-bold">Email</h5>
+
+          <a href="mailto:owenlehlohonolo636@gmail.com"
+             class="contact-text">
+            owenlehlohonolo636@gmail.com
+          </a>
         </div>
       </div>
 
-      <div class="col-12 col-md-4">
-        <div class="p-4 rounded-4 bg-secondary bg-opacity-25 h-100">
+      <!-- GitHub -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="contact-info-card p-4 rounded-4 h-100">
           <i class="fab fa-github fa-2x text-primary mb-3"></i>
-          <h5>GitHub</h5>
-          <p class="mb-0">github.com/Owentech-beep</p>
+
+          <h5 class="fw-bold">GitHub</h5>
+
+          <a href="https://github.com/Owentech-beep"
+             target="_blank"
+             class="contact-text">
+            github.com/Owentech-beep
+          </a>
         </div>
       </div>
 
-      <div class="col-12 col-md-4">
-        <div class="p-4 rounded-4 bg-secondary bg-opacity-25 h-100">
+      <!-- Instagram -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="contact-info-card p-4 rounded-4 h-100">
           <i class="fab fa-instagram fa-2x text-primary mb-3"></i>
-          <h5>Instagram</h5>
-          <p class="mb-0">@owen_can_code</p>
+
+          <h5 class="fw-bold">Instagram</h5>
+
+          <a href="https://www.instagram.com/owen_can_code/"
+             target="_blank"
+             class="contact-text">
+            @owen_can_code
+          </a>
         </div>
       </div>
 
@@ -605,7 +718,6 @@
 
  <footer class="py-4 text-center">
   <div class="container">
-
     <h4 class="mb-3">Connect with Me</h4>
 
     <a href="https://github.com/Owentech-beep",
