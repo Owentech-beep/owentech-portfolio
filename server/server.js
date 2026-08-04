@@ -29,11 +29,24 @@ app.get("/", (req, res) => {
 app.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
+  console.log("📨 Contact form received");
+
   try {
     // Validate fields
     if (!name || !email || !subject || !message) {
+      console.log("⚠️ Missing fields");
       return res.redirect("/?error=missing");
     }
+
+    console.log(
+      "EMAIL_USER:",
+      process.env.EMAIL_USER ? "FOUND" : "MISSING"
+    );
+
+    console.log(
+      "EMAIL_PASS:",
+      process.env.EMAIL_PASS ? "FOUND" : "MISSING"
+    );
 
     // Gmail transporter
     const transporter = nodemailer.createTransport({
@@ -42,6 +55,7 @@ app.post("/contact", async (req, res) => {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      connectionTimeout: 10000, // 10 seconds
     });
 
     // Send email
@@ -77,7 +91,7 @@ ${message}
     return res.redirect("/?sent=true");
 
   } catch (error) {
-    console.error("❌ Email error:", error.message);
+    console.error("❌ Email error:", error);
 
     return res.redirect("/?error=send");
   }
