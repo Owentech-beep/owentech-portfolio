@@ -17,26 +17,16 @@ const alertBox = document.getElementById("formAlert");
 
 if (alertBox) {
 
-  if (params.get("sent") === "true") {
+  if (params.get("sent")) {
     alertBox.innerHTML = `
       <div class="alert alert-success alert-dismissible fade show rounded-4 shadow-sm" role="alert">
         <strong>Success!</strong> Your message has been sent successfully.
-        I’ll get back to you as soon as possible.
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
       </div>
     `;
   }
 
-  if (params.get("error") === "missing") {
-    alertBox.innerHTML = `
-      <div class="alert alert-warning alert-dismissible fade show rounded-4 shadow-sm" role="alert">
-        <strong>Warning!</strong> Please fill in all the required fields.
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      </div>
-    `;
-  }
-
-  if (params.get("error") === "send") {
+  if (params.get("error")) {
     alertBox.innerHTML = `
       <div class="alert alert-danger alert-dismissible fade show rounded-4 shadow-sm" role="alert">
         <strong>Error!</strong> Could not send your message. Please try again later.
