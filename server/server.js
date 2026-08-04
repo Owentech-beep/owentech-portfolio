@@ -49,15 +49,15 @@ app.post("/contact", async (req, res) => {
     );
 
     // Gmail transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      connectionTimeout: 10000, // 10 seconds
-    });
-
+   const transporter = nodemailer.createTransport({
+   host: "smtp.gmail.com",
+   port: 465,
+   secure: true,
+   auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
     // Send email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
